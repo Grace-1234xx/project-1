@@ -1,0 +1,196 @@
+/* Reset and Base Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background:rgb(216, 215, 224);
+  color: #333;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: #302f2f;
+}
+
+/* Header */
+header {
+  background: url(images/GettyImages-1407832840.webp);
+  color: #faf8f8
+  text-align: center;
+  padding: 2rem 1rem
+}
+
+header h1 {
+    background:rgb(46, 24, 139)
+  margin: 0;
+  font-size: 8rem;
+  text-align: center;
+  color: #342286;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0 1rem;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 10px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+
+/* Sections */
+section {
+  padding: 2rem 1rem;
+  max-width: 960px;
+  margin: auto;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Grid layout for services */
+.project-appgrid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 2rem 0;
+}
+
+/* Individual card styling */
+.project {
+  background-color: #fff;url(../../Pictures/delux.jpg)
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Zoom and elevate on hover */
+.project:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Image styling and zoom effect */
+.project img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.project:hover img {
+  transform: scale(1.05);
+}
+
+/* Headings and text */
+.project h3 {
+  margin: 1rem;
+  font-size: 1.3rem;
+  color: #2c3e50;
+}
+
+.project p {
+  margin: 0 1rem 1.2rem;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Skills */
+.skills-section {
+  background: #d68f8f;
+}
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.skills-container div {
+  flex: 1 1 45%;
+}
+
+/* Contact */
+#contact {
+  padding: 40px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form {
+  max-width: 500px;
+  margin:  0 auto;
+  gap: 1rem;
+}
+
+input, textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px ;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+button {
+  padding: 12px 25px;
+  background: #25D366; /* Whatsapp green */
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background - color 0.3s ease;
+}
+
+button:hover {
+  background: #1ebc5a;
+}
+
+/* Footer */
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-grid, .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
